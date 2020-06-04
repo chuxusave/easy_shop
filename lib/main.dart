@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'article_list.dart';
+import 'article_detail.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Easy Shop',
+      // 主题
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      // 路由表
+      routes: {"article_detail": (context) => ArticleDetail()},
       home: MyHomePage(title: 'Easy Shop'),
     );
   }
